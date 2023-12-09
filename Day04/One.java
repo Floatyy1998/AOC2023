@@ -2,7 +2,6 @@ package Day04;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class One {
@@ -19,7 +18,7 @@ public class One {
             List<String> winningNumbersList = new ArrayList<>();
 
             for (String s : myNumbers) {
-                int counter = 0;
+
                 if (!s.isEmpty()) {
                     myNumbersList.add(s);
                 }

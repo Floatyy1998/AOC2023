@@ -1,9 +1,9 @@
 package Day02;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,19 +18,6 @@ public class Two {
         scoreMap.put("blue", 0);
         scoreMap.put("green", 0);
         return scoreMap;
-    }
-
-    private static Boolean checkMap(Map<String, Integer> scoreMap) {
-        if (scoreMap.get("red") > 12) {
-            return false;
-        }
-        if (scoreMap.get("green") > 13) {
-            return false;
-        }
-        if (scoreMap.get("blue") > 14) {
-            return false;
-        }
-        return true;
     }
 
     public static void play(List<String> inputData) {

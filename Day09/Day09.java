@@ -12,8 +12,8 @@ public class Day09 {
         System.out.println(
                 "Part 2: " + new Day09().solve(false, Helper.ReadTxTToArray.readLinesString("Day09/input.txt")));
     }
-    
-  public String solve(boolean part1, List<String> list) {
+
+    public String solve(boolean part1, List<String> list) {
         long answer = 0;
         for (String line : list) {
             List<Integer> sequence = new ArrayList<>();

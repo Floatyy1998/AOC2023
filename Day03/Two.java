@@ -8,12 +8,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.regex.Pattern;
+
 import java.util.stream.Stream;
 
 public class Two {
@@ -28,7 +25,6 @@ public class Two {
     private static final char[][] engineSchematic = parseSchematic("Day03/input.txt");
 
     public static void main(String[] args) {
-        final List<Integer> adjacentNumbers = new ArrayList<>();
         final List<Integer> gearRatios = new ArrayList<>();
         for (int i = 0; i < engineSchematic.length; i++) {
             for (int j = 0; j < engineSchematic[i].length; j++) {
@@ -36,15 +32,14 @@ public class Two {
                 if (isSymbol(current)) {
 
                     final List<Integer> neighbours = getAdjacentNumbers(i, j).stream().map(Number::value).toList();
-               
-   
+
                     if (current == '*' && neighbours.size() == 2) {
                         gearRatios.add(neighbours.get(0) * neighbours.get(1));
                     }
                 }
             }
         }
-      
+
         System.out.println("Solution part 2: " + gearRatios.stream().reduce(0, Integer::sum));
     }
 
