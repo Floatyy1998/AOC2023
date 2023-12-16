@@ -45,4 +45,19 @@ public class ReadTxTToArray {
 
         return list;
     }
+
+    public static List<String> readLinesStringwithBlanks(String filename) throws IOException {
+        BufferedReader in = new BufferedReader(new FileReader(filename));
+        String line;
+        List<String> list = new ArrayList<>();
+
+        while ((line = in.readLine()) != null) {
+
+            list.add(line);
+
+        }
+        in.close();
+
+        return list;
+    }
 }
